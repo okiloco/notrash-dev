@@ -7,43 +7,32 @@ angular.module('app.routes', [])
   // Set up the various states which the app can be in.
   // Each state's controller can be found in controllers.js
   $stateProvider
-    
-  
 
-      .state('menu.login', {
+      .state('login', {
     url: '/login',
-    views: {
-      'side-menu21': {
-        templateUrl: 'templates/login.html',
-        controller: 'loginCtrl'
-      }
-    }
+    templateUrl: 'templates/login.html',
+    controller: 'loginCtrl'
   })
-
   .state('registrar', {
     url: '/registrar',
     templateUrl: 'templates/registrar.html',
     controller: 'registrarCtrl'
   })
-
   .state('menu', {
     url: '/menu',
     templateUrl: 'templates/menu.html',
     abstract:true
   })
-
   .state('recursos', {
     url: '/recursos',
     templateUrl: 'templates/recursos.html',
     controller: 'recursosCtrl'
   })
-
   .state('recursoDetalle', {
     url: '/recursoDetalle',
     templateUrl: 'templates/recursoDetalle.html',
     controller: 'recursoDetalleCtrl'
   })
-
   .state('menu.recurso', {
     url: '/recurso/:id',
     views: {
@@ -70,7 +59,7 @@ angular.module('app.routes', [])
     controller: 'comentariosCtrl'
   })
 
-$urlRouterProvider.otherwise('/menu/login')
+$urlRouterProvider.otherwise('/login')
 
   
 
